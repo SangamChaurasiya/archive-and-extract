@@ -15,9 +15,12 @@ choose_button2 = fsg.FolderBrowse("Choose", key="folder")
 extract_button = fsg.Button("Extract")
 output_label = fsg.Text(key="output", text_color="green")
 
+col1 = fsg.Column([[label1], [label2]])
+col2 = fsg.Column([[input1], [input2]])
+col3 = fsg.Column([[choose_button1], [choose_button2]])
+
 window = fsg.Window("Archive Extractor", 
-                    layout=[[label1, input1, choose_button1], 
-                            [label2, input2, choose_button2], 
+                    layout=[[col1, col2, col3], 
                             [extract_button, output_label]])
 
 while True:
