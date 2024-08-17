@@ -13,9 +13,12 @@ choose_button2 = fsg.FolderBrowse(button_text="Choose", button_color=("Black", "
 compress_button = fsg.Button(button_text="Compress")
 output_label = fsg.Text(key="output", text_color="Green")
 
+col1 = fsg.Column([[label1], [label2]])
+col2 = fsg.Column([[input1], [input2]])
+col3 = fsg.Column([[choose_button1], [choose_button2]])
+
 window = fsg.Window(title="Files Compressor", 
-                    layout=[[label1, input1, choose_button1], 
-                            [label2, input2, choose_button2], 
+                    layout=[[col1, col2, col3],  
                             [compress_button, output_label]])
 
 while True:
